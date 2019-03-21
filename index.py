@@ -62,7 +62,7 @@ if __name__ == '__main__':
     if imageExists(arg1) is True:
         org_image = cv2.imread(arg1)
         filter = cv2.CascadeClassifier(
-            './haarcascade/haarcascade_frontalface_default.xml')
+            '~/haarcascade/haarcascade_frontalface_default.xml')
         face_detection = faceRecognition(filter, org_image)
         cv2.imwrite('changed.jpg',face_detection)
         sys.exit(0)
