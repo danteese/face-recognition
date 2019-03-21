@@ -64,7 +64,9 @@ if __name__ == '__main__':
         filter = cv2.CascadeClassifier(
             './haarcascade/haarcascade_frontalface_default.xml')
         face_detection = faceRecognition(filter, org_image)
-        cv2.imwrite('changed.jpg',face_detection)
+        parts = arg1.split('.')
+        new_image = parts[0] + "_changed.jpg"
+        cv2.imwrite(new_image ,face_detection)
         sys.exit(0)
     else:
         print("Archivo no existente.")
