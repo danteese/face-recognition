@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+
 import cv2
 import sys
 import os
@@ -67,6 +68,7 @@ if __name__ == '__main__':
         parts = arg1.split('.')
         new_image = parts[0] + "_changed.jpg"
         cv2.imwrite(new_image ,face_detection)
+        print(new_image)
         sys.exit(0)
     else:
         print("Archivo no existente.")
